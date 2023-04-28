@@ -1,0 +1,41 @@
+id: af28ac23-68c0-401d-9035-eb4053a56336
+timestamp: 2023-04-28T17:18:29Z
+username: tputbrese
+source: VSCODE
+accelerator:
+  name: java-server-side-ui
+  source:
+    image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:29b57876609bce110ce284f8e407f3ca4c8680394bf89961b7c44ca4cc6170ad
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: java-version
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: live-update
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:f38e89653d0a59a5d14e1e13ad1d2928dc2b4ff292825071bdfdab30a2dc5019
+  - name: spring-boot-app-sso-auth-code-flow
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:c515c1ebb91ae11d2238ecbb32e482dbdff9dff4490b7439485007cd8a834c24
+  - name: tap-workload
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+  - name: app-sso-client
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:c2677bdca0653181384cafb7810738edb2fa5ec420f74313bd284127ee7e5fc8
+  - name: build-wrapper-gradle
+    source:
+      image: registry.tanzu.vmware.com/tanzu-application-platform/tap-packages@sha256:5480259d6a29a11f0cc482cd304501d74ccd89dd7207f2d639d6f0d8eedc3bf8
+options:
+  artifactId: server-side-ui-starter
+  buildTool: maven
+  groupId: com.example
+  includeAppSsoIntegration: false
+  includeBuildToolWrapper: true
+  javaVersion: 11
+  liveUpdateIDESupport: true
+  packageName: com.example.serversideuistarter
+  projectName: java-server-side-ui
+  sourceRepositoryPrefix: dev.local
